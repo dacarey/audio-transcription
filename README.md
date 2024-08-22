@@ -1,41 +1,43 @@
 
-# Audio Transcription Project
+# Audio Transcription Tool
 
-This Python project extracts audio from a video file or directly processes an audio file to transcribe the audio into text. It uses the `moviepy` library to handle video and audio processing and the `SpeechRecognition` library to transcribe the audio.
+> While there are more advanced tools for speech-to-text conversion, such as the [Google Speech-to-Text API](https://cloud.google.com/speech-to-text), having a local script provides certain advantages.
+
+This Python project allows you to extract audio from a video file or directly process an audio file to transcribe the content into text. The project utilizes the `moviepy` library for video and audio processing, and the `SpeechRecognition` library for audio transcription.
 
 ## Features
 
-- Extracts audio from video files.
-- Directly processes audio files.
-- Transcribes audio using Google Web Speech API.
-- Outputs transcription to the console and saves it to a `transcription.txt` file.
+- Extract audio from video files.
+- Process audio files directly.
+- Transcribe audio using the Google Web Speech API.
+- Output the transcription to the console and save it to a `transcription.txt` file.
 
 ## Requirements
 
-- Python 3.10 or greater
+- Python 3.10 or higher
 - `moviepy`
 - `SpeechRecognition`
 - `pydub`
 
 ## Setup
 
-Follow these steps to set up the project on your local machine:
+To set up the project on your local machine, follow these steps:
 
-1. **Clone the repository**:
+1. **Clone the Repository:**
 
    ```bash
    git clone https://github.com/username/repo-name.git
    cd repo-name
    ```
 
-2. **Create and activate a virtual environment**:
+2. **Create and Activate a Virtual Environment:**
 
    ```bash
    python -m venv .venv
-   source .venv/bin/activate  # or .venv\Scripts\activate on Windows
+   source .venv/bin/activate  # On Windows, use .venv\Scripts\activate
    ```
 
-3. **Install the dependencies**:
+3. **Install the Dependencies:**
 
    ```bash
    pip install -r requirements.txt
@@ -43,19 +45,19 @@ Follow these steps to set up the project on your local machine:
 
 ## Usage
 
-You can use this script to transcribe both video and audio files. The script will automatically detect the file type based on the extension and process it accordingly.
+This script can transcribe both video and audio files. It automatically detects the file type based on the extension and processes it accordingly.
 
 ### Running the Script
 
 1. **From the Bash Shell:**
 
-   Make sure the script is executable:
+   Ensure the script is executable:
 
    ```bash
    chmod +x transcribe_file.py
    ```
 
-   Then, you can run the script directly:
+   Then, run the script directly:
 
    ```bash
    ./transcribe_file.py <file_path>
@@ -65,7 +67,7 @@ You can use this script to transcribe both video and audio files. The script wil
 
 2. **Using the Python Command:**
 
-   You can also run the script using Python:
+   Alternatively, you can run the script with Python:
 
    ```bash
    python transcribe_file.py <file_path>
@@ -76,7 +78,7 @@ You can use this script to transcribe both video and audio files. The script wil
 - **Video:** `.mp4`, `.avi`, `.mov`, `.mkv`
 - **Audio:** `.wav`, `.mp3`, `.flac`, `.aac`, `.ogg`
 
-### Example
+### Example Usage
 
 To transcribe a video file:
 
@@ -92,7 +94,7 @@ python transcribe_file.py example_audio.wav
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Contributing
 
