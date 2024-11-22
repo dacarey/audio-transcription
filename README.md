@@ -15,9 +15,9 @@ This Python project allows you to extract audio from a video file or directly pr
 ## Requirements
 
 - Python 3.10 or higher
-- `moviepy`
-- `SpeechRecognition`
-- `pydub`
+- [`moviepy`](https://pypi.org/project/moviepy/)
+- [`SpeechRecognition`](https://pypi.org/project/SpeechRecognition/)
+- [`pydub`](https://pypi.org/project/pydub/)
 
 ## Setup
 
