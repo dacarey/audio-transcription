@@ -16,6 +16,7 @@ def extract_audio_from_video(video_path, audio_output_path):
     audio.write_audiofile(audio_output_path)
     return audio_output_path
 
+
 def transcribe_audio_with_timestamps(audio_path, chunk_length_ms=30000):
     """Transcribe audio and add timestamps."""
     recognizer = sr.Recognizer()
@@ -40,22 +41,25 @@ def transcribe_audio_with_timestamps(audio_path, chunk_length_ms=30000):
             except sr.UnknownValueError:
                 print(f"Chunk {i} could not be understood.")
             except sr.RequestError as e:
-                print(f"Could not request results from Google Speech Recognition service; {e}")
+                print(
+                    f"Could not request results from Google Speech Recognition service; {e}"
+                )
 
         os.remove(chunk_filename)
 
     with open("transcription_with_timestamps.txt", "w", encoding="utf-8") as file:
         file.write(transcription)
 
+
 def main(input_path):
     """Main function to determine file type and transcribe."""
     file_extension = os.path.splitext(input_path)[1].lower()
 
-    if file_extension in ['.mp4', '.avi', '.mov', '.mkv']:
+    if file_extension in [".mp4", ".avi", ".mov", ".mkv"]:
         print("Video file detected. Extracting audio...")
         audio_output_path = "output_audio.wav"
         audio_path = extract_audio_from_video(input_path, audio_output_path)
-    elif file_extension in ['.wav', '.mp3', '.flac', '.aac', '.ogg']:
+    elif file_extension in [".wav", ".mp3", ".flac", ".aac", ".ogg"]:
         print("Audio file detected. Transcribing...")
         audio_path = input_path
     else:
@@ -63,6 +67,7 @@ def main(input_path):
         return
 
     transcribe_audio_with_timestamps(audio_path)
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
