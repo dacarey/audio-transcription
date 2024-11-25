@@ -11,7 +11,7 @@ proglog==0.1.10
 pydub==0.25.1
 requests==2.32.3
 setuptools==73.0.1
-SpeechRecognition==3.10.4
+SpeechRecognition==3.11.0
 tqdm==4.66.5
 typing_extensions==4.12.2
 urllib3==2.2.2
